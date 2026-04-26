@@ -49,4 +49,4 @@ OUTPUT = {
     'max_trades_shown': 20,
 }
 
-TUSHARE_TOKEN = '6c5ace2424e4a7602c7195abf962a3cc1e110f4aadd2a1b03112c995'
+TUSHARE_TOKEN = '6c5ace2424e4a7602c7195abf962a3cc1e110f4aadd2a1b03112c99'
