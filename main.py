@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # 设置matplotlib支持中文显示
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体
+plt.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'Songti SC', 'SimHei']  # 使用MacOS系统可用的中文字体
 plt.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
 
 # Set Tushare token (replace with your actual token)
@@ -541,20 +541,31 @@ ETF_CHINESE_NAMES = {
     '518850.SH': '黄金ETF',  # 黄金
     '161119.SZ': '债券ETF',  # 债券
     '159259.SZ': '成长ETF',  # 成长
-    '159338.SZ': '中证A500ETF',  # 中证A500
-    '159232.SZ': '自由现金流ETF',  # 自由现金流
+    # '159338.SZ': '中证A500ETF',  # 中证A500
+    '159232.SZ': '中证现金流ETF',  # 中证现金流
+    '159201.SZ': '自由现金流ETF',  # 自由现金流
+    '161130.SZ': '纳斯达克ETF',  # 纳斯达克
+    '159100.SZ': '巴西ETF',  # 巴西
+    '513000.SH': '日经ETF',  # 日经
+    '159985.SZ': '豆粕期货ETF', # 豆粕期货
 }
 
 # Main function
 def main():
     # 定义目标权重
     target_weights = {
-        '161125.SZ': 0.10,  # 标普500
-        '518850.SH': 0.30,  # 黄金
-        '161119.SZ': 0.30,  # 债券
+        '161125.SZ': 0.05,  # 标普500
+        '518850.SH': 0.05,  # 黄金
+        '161119.SZ': 0.60,  # 债券
         '159259.SZ': 0.10,  # 成长
-        '159338.SZ': 0.10,  # 中证A500
-        '159232.SZ': 0.10,  # 自由现金流
+        # '159338.SZ': 0.10,  # 中证A500
+        '159232.SZ': 0.05,  # 中证现金流
+        '159201.SZ': 0.05,  #自由现金流
+        '161130.SZ': 0.025,  #纳斯达克
+        '159100.SZ': 0.025,  #巴西ETF
+        '513000.SH': 0.025, #日经
+        '159985.SZ': 0.025, #豆粕期货
+
     }
 
     # 初始化策略
